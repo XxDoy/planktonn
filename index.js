@@ -147,48 +147,7 @@ client.on("ready", () => {
 
             let cmd = bot.commands.get(command.slice(prefix.length));
             if (cmd) cmd.run(bot, message, args);
-        });
-
-          client.on("guildMemberAdd", async member => {
-            
-            let namam = member.user.username
-            let batasnama = namam.lenght > 12 ? namam.substring(0.10) + "..." : namam;
-                async function createCanvas() {
-
-                let imageUrlPhoto = /\?size=2048$/g;
-
-                let image = 'https://www.f-covers.com/cover/dreaming-anime-facebook-cover-timeline-banner-for-fb.jpg';
-
-                let {body: background} = await superagent.get(image);
-                let {body: avatar} = await superagent.get(member.user.displayAvatarURL.replace(imageUrlPhoto, "?size=128"));
-
-                return new Canvas(856, 376)
-                    .addImage(avatar, 100, 50, 256, 256, 128)
-                    .setColor('#fdff00')
-                    .setTextFont('bold 30px Aria')
-                    .addImage(background, 0, 0, 856, 376)
-                    .addText(`${batasnama}`, 165, 350)
-                    .addRoundImage(avatar, 110, 50, 256, 256, 128)
-                    .toBufferAsync();
-
-                }
-
-                let attachment = new Discord.MessageAttachment(
-                    image,
-                    "welcome-image.png"
-                );
-
-                let channel = member.guild.channels.get('753213573831983138');
-                    channel.send(`Welcome To Atlantis @${member.user.username}`, {
-
-                       files: [{
-                           attachment: await createCanvas(),
-                           name: 'Atlantis Welcome Image.jpg'
-
-
-                       }] 
-                    })
-
+   
                     client.on("message", async message => {
                         if (message.content === `${prefix}join`) {
                             client.emit("guildMemberAdd", message.member);
