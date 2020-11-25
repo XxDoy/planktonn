@@ -1,7 +1,6 @@
 const { Client, MessageEmbed, Collection } = require('discord.js');
 const discord = require('discord.js');
 const { config } = require('dotenv');
-const { Canvas } = require('canvas-constructor')
 const { resolve, join } = require('path')
 const { get } = require('snekfetch')
 const fs = require('fs')
