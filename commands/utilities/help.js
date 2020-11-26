@@ -28,7 +28,7 @@ module.exports = {
                     inline: false
                 }, {
                     name: "Fun ",
-                    value: '`hug` `kiss` `slap` `punch` `cry` `angry` `pat` `pikachu` `meme`',
+                    value: '`hug` `kiss` `slap` `punch` `cry` `happy` `angry` `pat` `pikachu` `meme`',
                     inline: false
                 }, {
                     name: "Economy ",
