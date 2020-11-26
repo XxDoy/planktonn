@@ -9,7 +9,6 @@ module.exports = {
     run: async(client, message, args) => {
         const embed = new MessageEmbed()
     .setColor("RANDOM")
-    .setAuthor(`${message.guild.name}`, avatar)
     .setTitle("PIC LIST")
     .setDescription("***Use a? (command)***")
     .addField("➤` neko`\n➤` waifu`\n`➤ cat`\n➤` dog`\n➤` panda`\n➤` fox`\n➤` koala`")
