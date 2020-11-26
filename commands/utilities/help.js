@@ -24,7 +24,7 @@ module.exports = {
                     inline: true
                 }, {
                     name: "Infomation ",
-                    value: '**Use a?(command)**\n➤`| server`\n➤`| bot`\n➤`| user`',
+                    value: '`serverinfo` `botinfo` `userinfo`',
                     inline: false
                 }, {  
                     name: "Utilities ",

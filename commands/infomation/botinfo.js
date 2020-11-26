@@ -18,7 +18,7 @@ module.exports = {
                 inline: true
             }, {
                 name: '👔 Bot Developer',
-                value: ` <@313957047202873344> .`,
+                value: ` <@!637533978982612992> .`,
                 inline: true
             }, {
                 name: '🌐 Servers',
