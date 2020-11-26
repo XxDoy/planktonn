@@ -11,9 +11,11 @@ module.exports = {
 
         const avatar = message.author.displayAvatarURL({ size: 4096, dynamic: true });
 
+
         if (!help) {
+            
             let embed = new MessageEmbed()
-                .setTitle('Menu Help | `a?help` | Atlantis')
+                .setTitle('Help Menu')
                 .setThumbnail('https://images-ext-2.discordapp.net/external/MdiB5w3UZ3BKjkegeVbC4HTwlTManaVM349YloCDvHk/%3Fwidth%3D468%26height%3D468/https/images-ext-1.discordapp.net/external/NyReI_EVus3P2NbhTPjtiPyRwcNrM_vB6iHfkK-OS2M/https/media.giphy.com/media/u11uVavpcwiqc56zbx/giphy.gif')
                 .setAuthor(`${message.guild.name}`, avatar)
                 .addFields({
@@ -22,11 +24,11 @@ module.exports = {
                     inline: true
                 }, {
                     name: "Utilities ",
-                    value: '`avatar` `banner` `say` `user` `calculate` `weather` `waifu` `neko` `pikachu` `cat` `dog` `panda` `fox` `bird` `koala`',
+                    value: '`avatar` `banner` `say` `user` `calculate` `weather` `pic` `anime`',
                     inline: false
                 }, {
                     name: "Fun ",
-                    value: '`hug` `kiss` `slap` `punch` `cry` `pat` `meme`',
+                    value: '`hug` `kiss` `slap` `punch` `cry` `pat` `pikachu` `meme`',
                     inline: false
                 }, {
                     name: "Economy ",
@@ -42,6 +44,9 @@ module.exports = {
                 .setImage("https://images-ext-2.discordapp.net/external/COl0mZHjPwdVXFoxenrUPy1jbX8atqOai7dIO42wMns/https/media.discordapp.net/attachments/709369821439197237/709374347340677231/lineee.gif")
                 .setTimestamp()
             return message.channel.send(embed)
+            msg.delete()
         }
     }
 }
+
+

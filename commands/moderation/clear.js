@@ -9,7 +9,9 @@ module.exports = {
     run: async(bot, message, args) => {
         const amount = args.join(" ");
 
-        if (message.member.hasPermission("")) return message.channel.send('You can\'t use that.');
+        if (!message.member.hasPermission.has("MANAGE_MESSAGE")) return message.channel.send('You can\'t use that.');
+
+        let deleteAmount;
 
         if (!amount) return message.reply('please provide an amount of messages for me to delete')
 

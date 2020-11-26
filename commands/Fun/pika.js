@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 const axios = require('axios');
 
 module.exports = {
-    name: "pika",
+    name: "pikachu",
     category: "utilites",
     timeout: 10000,
     run: async(client, message, args) => {
