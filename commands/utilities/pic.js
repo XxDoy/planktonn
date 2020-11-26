@@ -1,7 +1,5 @@
 const { MessageEmbed } = require('discord.js');
 
-const avatar = message.author.displayAvatarURL({ size: 4096, dynamic: true });
-
 module.exports = {
     name: "pic",
     category: "utilites",
