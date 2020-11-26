@@ -9,7 +9,7 @@ module.exports = {
     run: async(bot, message, args) => {
         const amount = args.join(" ");
 
-        if (!message.member.hasPermission.has("MANAGE_MESSAGE")) return message.channel.send('You can\'t use that.');
+        if (!message.member.hasPermission("MANAGE_MESSAGE")) return message.channel.send('You can\'t use that.');
 
         let deleteAmount;
 

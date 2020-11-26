@@ -33,7 +33,7 @@ client.on("ready", () => {
     let statuses = [
         `a?help | Bot Official Atlantis`,
         `a?help | Bot Undev`,
-        `a?help | Bot 32% to V 1.0`,
+        `a?help | Bot 35% to V 1.0`,
         `a?help |🔱 Developer By DreamCathcer`
     ];
 
