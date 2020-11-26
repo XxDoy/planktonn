@@ -23,6 +23,10 @@ module.exports = {
                     value: '`ban` `kick` `warn` `mute` `warnings` `unban` `deletewarns` `unmute` `clear` ',
                     inline: true
                 }, {
+                    name: "Infomation ",
+                    value: '**Use a?(command)**\n➤`| server`\n➤`| bot`\n➤`| user`',
+                    inline: false
+                }, {  
                     name: "Utilities ",
                     value: '`avatar` `banner` `say` `user` `calculate` `weather` `pic` `anime`',
                     inline: false
