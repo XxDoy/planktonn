@@ -1,3 +1,4 @@
+const Command = require('../../handler/commands')
 const { runInContext } = require('vm');
 const ms = require('ms');
 
