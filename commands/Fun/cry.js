@@ -18,7 +18,7 @@ module.exports = {
     
     const kiss = new MessageEmbed()
         .setColor('RANDOM')
-        .setTitle(`${message.author.username} was **ANGRY**`)
+        .setTitle(`${message.author.username} was **CRYING**`)
         .setImage(kisses[Math.floor(Math.random() * kisses.length)])
     return message.channel.send(kiss)
 
