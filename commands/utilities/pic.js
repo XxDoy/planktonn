@@ -9,7 +9,16 @@ module.exports = {
     .setColor("RANDOM")
     .setTitle("PIC LIST")
     .setDescription("***Use a? (command)***")
-    .addField("➤`| neko`\n➤`| waifu`\n➤`| cat`\n➤`| dog`\n➤`| panda`\n➤`| fox`\n➤`| koala`")
+    .addField({
+        name: "Animal",
+        value: '➤`| cat`\n➤`| dog`\n➤`| panda`\n➤`| fox`\n➤`| koala`',
+        inline: true
+    }, {
+        name: "Anime",
+        value: '➤`| neko`\n➤`| waifu`',
+        inline: true
+    })
+
     .setFooter(`Requested by ${message.author.username}`);
     
     await message.channel.send(embed)       
