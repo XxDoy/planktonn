@@ -6,7 +6,7 @@ const kisses = [
     'https://images-ext-1.discordapp.net/external/kPJwaSOVBZ6mc6nXBZGiX4KyzuoEn2SyH0_ljT4mNhI/%3Fitemid%3D8312712/https/media1.tenor.com/images/445c3de1f9a6a87694bcbb2739d35451/tenor.gif',
     'https://images-ext-1.discordapp.net/external/EG7Q85npPynfP5VSpz6M7-TyVI9V5viAGKJVDX8hGSE/%3Fitemid%3D18730371/https/media1.tenor.com/images/d120890dd8822fcd6e20349d38d8f1e6/tenor.gif',
     'https://images-ext-2.discordapp.net/external/qP2EzpN3wMisSKQc7DzZXZq_sbsWd7AorntvZdTtaWI/%3Fitemid%3D17609605/https/media1.tenor.com/images/b5abcf68a1e8f63ed66eabba8c06babc/tenor.gif',
-    'https://media.discordapp.net/attachments/753213573831983138/781032290381201408/tenor.png',
+    'https://i.pinimg.com/originals/3c/69/16/3c691659f01aba24f6a6deed24305989.gif',
     'https://media.tenor.com/images/ea72a5815cd40647d21caac9479c67c1/tenor.gif',
     'https://images-ext-2.discordapp.net/external/sZWeD2CWybA8FVoC1V1lsVJ_fJHeh8kE-fBfXSU0TLc/%3Fitemid%3D17822861/https/media1.tenor.com/images/c706a239ba712562755e42dca4c9aa40/tenor.gif'
 ];
