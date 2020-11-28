@@ -11,6 +11,8 @@ module.exports = {
 
         const avatar = message.author.displayAvatarURL({ size: 4096, dynamic: true });
 
+        const m = await message.channel.send(embed);
+
 
         if (!help) {
             

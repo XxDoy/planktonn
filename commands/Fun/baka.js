@@ -12,7 +12,7 @@ module.exports = {
     timeout: 10000,
     run: async(client, message, args) => {
         const user = message.mentions.users.first();
-        if (!user) return message.channel.send('You Must Mention Someone To Use This Command');
+        if (!user) return message.reply('You Must Mention Someone To Use This Command');
 
     const kiss = new MessageEmbed()
         .setColor('RANDOM')
