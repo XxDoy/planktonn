@@ -20,11 +20,11 @@ module.exports = {
                 .setAuthor(`${message.guild.name}`, avatar)
                 .addFields({
                     name: "Administrator ",
-                    value: '`ban` `kick` `warn` `mute` `warnings` `unban` `deletewarns` `unmute` `clear` ',
+                    value: '`ban` | `kick` | `warn` | `mute` | `warnings` | `unban` | `deletewarns` | `unmute` | `clear` ',
                     inline: true
                 }, {
                     name: "Infomation ",
-                    value: '`serverinfo` `botinfo` `userinfo`',
+                    value: '`serverinfo` | `botinfo` | `userinfo`',
                     inline: false
                 }, {  
                     name: "Utilities ",
@@ -32,7 +32,7 @@ module.exports = {
                     inline: false
                 }, {
                     name: "Fun ",
-                    value: '`hug` `kiss` `slap` `punch` `cry` `happy` `angry` `pat` `pikachu` `meme`',
+                    value: '`hug` | `kiss` | `slap` | `punch` | `cry` | `happy` | `angry` | `pat` | `feed` | `baka` | `pikachu` | `meme`',
                     inline: false
                 }, {
                     name: "Economy ",
