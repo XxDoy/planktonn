@@ -22,7 +22,8 @@ module.exports = {
         const embed = new MessageEmbed()
             .setColor('#B12600')
             .setTitle('[Mitsuki Nase Tier: 6](https://animesoul.com/)')
-            .setDescription('To claim, use: `claim [captcha code]`\nSee your collected cards here.')
+            .setDescription('To claim, use: `claim [captcha code]`')
+            .setDescription(`[See your collected cards here.](https://animesoul.com/)`)
             .setImage('https://media.discordapp.net/attachments/770126915167322152/777659544926945310/name.png?width=209&height=300')
 
         await message.channel.send(embed)
