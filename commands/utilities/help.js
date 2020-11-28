@@ -39,6 +39,14 @@ module.exports = {
                     value: 'Soon!',
                     inline: false
                 }, {    
+                    name: "Support Bot's",
+                    value: ['Invite Bots']('https://discord.com/api/oauth2/authorize?client_id=753883436984565800&permissions=2147483639&scope=bot'),
+                    inline: true
+                }, {    
+                    name: "Support Server",
+                    value: ['Join Server']('https://discord.gg/9yzGgXvK6h'),
+                    inline: true
+                }, {    
                     name: "Note ",
                     value: '\_\_\*\*\*- This Bot Now Support Online 24 Hours \*\*\*\_\_\_',
                     inline: false
