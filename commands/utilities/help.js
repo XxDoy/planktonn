@@ -24,7 +24,7 @@ module.exports = {
                     inline: false
                 }, {  
                     name: "Utilities ",
-                    value: '`avatar` | `banner` | `say` `calculate` | `weather` | `pic` `anime`',
+                    value: '`avatar` | `banner` | `say` | `calculate` | `weather` | `pic` `anime`',
                     inline: false
                 }, {
                     name: "Fun ",
@@ -51,7 +51,7 @@ module.exports = {
                     
                     
                     
-                    '[`Join Server`](https://discord.gg/9yzGgXvK6h)',
+                    '[`Join Server`](https://discord.gg/VW5yb2tFut)',
                     inline: true
                 }, {    
                     name: "Note ",
