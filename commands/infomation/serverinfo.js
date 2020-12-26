@@ -5,10 +5,7 @@ module.exports = {
     category: "info",
     run: async(client, message, args) => {
         let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
-    }
-}
 
-exports.run = async(client, message, args) => {
     let region;
     switch (message.guild.region) {
         case "brazil":
@@ -51,7 +48,8 @@ exports.run = async(client, message, args) => {
             region = '🇺🇸 us-central'
             break;
     }
-
+}
+}
     const roles = message.guild.roles.cache.sort((a, b) => b.position - a.position).map(role => role.toString());
     const members = message.guild.members.cache;
     const channels = message.guild.channels.cache;
@@ -112,4 +110,3 @@ exports.run = async(client, message, args) => {
             inline: true
         })
     await message.channel.send(embed)
-}
