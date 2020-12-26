@@ -14,5 +14,5 @@ module.exports = {
     
     await message.channel.send(embed)       
 
-    }
+    },
 }
