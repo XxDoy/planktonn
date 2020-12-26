@@ -13,7 +13,6 @@ module.exports = {
             
             let embed = new MessageEmbed()
                 .setTitle('Help Menu')
-                .setThumbnail('https://images-ext-2.discordapp.net/external/MdiB5w3UZ3BKjkegeVbC4HTwlTManaVM349YloCDvHk/%3Fwidth%3D468%26height%3D468/https/images-ext-1.discordapp.net/external/NyReI_EVus3P2NbhTPjtiPyRwcNrM_vB6iHfkK-OS2M/https/media.giphy.com/media/u11uVavpcwiqc56zbx/giphy.gif')
                 .setAuthor(`${message.guild.name}`, avatar)
                 .addFields({
                     name: "Administrator ",
