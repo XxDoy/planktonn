@@ -31,7 +31,7 @@ client.on("ready", () => {
     console.log(`Bot Ready Up \n1 \n2 \n3 \nReady To Duty ${client.user.username} !`);
 
     let statuses = [
-        `b!help | ${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)} Members Blank`
+        `b?help | ${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)} Members Blank`
     ];
 
     setInterval(function() {

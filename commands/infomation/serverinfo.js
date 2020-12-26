@@ -1,5 +1,13 @@
 const { MessageEmbed } = require('discord.js');
 
+module.exports = {
+    name: "userinfo",
+    category: "info",
+    run: async(client, message, args) => {
+        let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
+    }
+}
+
 exports.run = async(client, message, args) => {
     let region;
     switch (message.guild.region) {
