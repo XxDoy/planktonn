@@ -6,7 +6,8 @@ const kisses = [
     'https://images-ext-1.discordapp.net/external/9-jk08uNYiGV457N84CrrSViVFn7Q04R-_Y-MV4WfJE/https/cdn.nekos.life/feed/feed_002.gif',
     'https://images-ext-2.discordapp.net/external/AVFiEzqVWWryI7nRAjUWNXqylnYhAykvuDwhVSCrHdI/https/cdn.nekos.life/feed/feed_007.gif',
     'https://images-ext-2.discordapp.net/external/tYHu5qu789hJU7it4TTFWawhLypQz6tL1q-T-5Ob1tw/https/cdn.nekos.life/feed/feed_006.gif',
-    'https://images-ext-1.discordapp.net/external/zFb9-5aVV72nrgYGtgGqcvWazgVvzsxqxAVsmJ7P_JY/https/cdn.nekos.life/feed/feed_016.gif'
+    'https://images-ext-1.discordapp.net/external/zFb9-5aVV72nrgYGtgGqcvWazgVvzsxqxAVsmJ7P_JY/https/cdn.nekos.life/feed/feed_016.gif',
+    'https://media1.tenor.com/images/6a69689b0b485b01b6395193f1490ceb/tenor.gif?itemid=15085210'
 ];
 
 module.exports = {
