@@ -5,7 +5,7 @@ const { resolve, join } = require('path')
 const { get } = require('snekfetch')
 const fs = require('fs')
 const superagent = require('superagent')
-const prefix = "a?";
+const prefix = "b!";
 const usersMap = new Map();
 const LIMIT = 5;
 const TIME = 7000;
@@ -31,10 +31,7 @@ client.on("ready", () => {
     console.log(`Bot Ready Up \n1 \n2 \n3 \nReady To Duty ${client.user.username} !`);
 
     let statuses = [
-        `a?help | Bot Official Atlantis`,
-        `a?help | Bot Undev`,
-        `a?help | Bot 38% to V 1.0`,
-        `a?help |🔱 Developer By DreamCathcer`
+        `b!help | ${client.users.cache.size} Members Blank`,
     ];
 
     setInterval(function() {
