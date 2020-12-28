@@ -1,7 +1,11 @@
 const Discord = require("discord.js")
 const ms = require("ms")
 
-module.exports.run = async(client,message,args)=> {
+module.exports = {
+    name: "remind",
+    category: "utilites",
+    timeout: 10000,
+    run: async(client, message, args) => {
     let timeuser = args[0]
     let reason = args.slice(1).join("")
 
@@ -20,4 +24,5 @@ module.exports.run = async(client,message,args)=> {
             clearInterval(interval)
         }
     },1000)
+}
 }
