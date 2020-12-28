@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const guildMember = message.member;
 
 module.exports = {
     name: "verify",
@@ -8,7 +9,7 @@ module.exports = {
         const role = message.guild.roles.cache.get('793111000173248533');
         if (!role) return message.channel.send('Verify role to obtain does not exist');
         try {
-            await message.member.addRole(role.id);
+            await message.member.guildMember.addRole(role.id);
             try {
                 await message.member.send(`You Have Verifiedin ${message.guild.name}`);
         } catch (err) {
