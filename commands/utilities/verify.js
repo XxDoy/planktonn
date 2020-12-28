@@ -5,9 +5,19 @@ module.exports = {
     category: "utilites",
     timeout: 10000,
     run: async(client, message, args) => {
-        
-        message.member.addRole("793111000173248533").then(
-            message.react('✔️')
-        ).catch(err => console.log(err))
+        const role = message.guild.roles.cache.get('793111000173248533');
+        if (!role) return message.channel.send('Verify role to obtain does not exist');
+        try {
+            await message.member.addRole(role.id);
+            try {
+                await message.member.send(`You Have Verifiedin ${message.guild.name}`);
+        } catch (err) {
+            console.log(err);
+            message.channel.send(`I wasn't able to message ${message.author.tag}`)
+        } 
+    } catch (err) {
+        message.channel.send(`There was an issue gving <@${message.author.id}> the verify on command.`);
+        console.log(err);
     }
+}
 }
