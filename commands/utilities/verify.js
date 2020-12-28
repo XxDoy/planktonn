@@ -11,7 +11,7 @@ module.exports = {
         }
         
         await message.delete();
-        await message.member.roles.add("793112898591129621");
+        await message.member.roles.add("793111000173248533");
         return;
     }
 }
