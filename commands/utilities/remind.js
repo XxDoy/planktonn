@@ -19,8 +19,9 @@ module.exports = {
             return message.channel.send('You need to spesify a reminder')
         }
 
-        message.channel.send(`@${message.author.id} You have set a reminder, i wil remind you ${time}`)
-            setTimeout(function () {
+        message.channel.send(`You have set a reminder, i wil remind you ${time}`)
+            
+        setTimeout(function () {
                 message.member.send(`${reminder}`)
             }, ms(time));
         }
