@@ -155,8 +155,8 @@ client.on("ready", () => {
 })
 
     client.on('guildMemberAdd', (member) => {
-        let channelID = '';
-        if(member.guild.id != '') return
+        let channelID = '775184245370912769';
+        if(member.guild.id != '774092854686777414') return
         let embed = new Discord.MessageEmbed()
         .setTitle(`Member Joined!!`)
         .setDescription(`${member.user.tag} has joined this server!`)
@@ -166,8 +166,8 @@ client.on("ready", () => {
     })
     
     client.on('guildMemberRemove', (member) => {
-        let channelID = '';
-        if(member.guild.id != '') return;
+        let channelID = '775184245370912769';
+        if(member.guild.id != '774092854686777414') return;
         let embed = new Discord.MessageEmbed()
         .setTitle(`Member Left!!`)
         .setDescription(`\`${member.user.tag}\` has left this server`)
