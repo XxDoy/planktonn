@@ -13,7 +13,6 @@ const kisses = [
     'https://media.giphy.com/media/NhuUvzNdoHA0o6F5fP/giphy.gif',
     'https://images-ext-2.discordapp.net/external/fu5fwqE3EBaQYUVI9TE6QRMyATAm_R2CH-nwfyoHcio/https/cdn.weeb.sh/images/HJ5khTOP-.gif',
 ];
-// ini loh dari kemaren koe gapaham harus isi module.exports = {} baru ikutin kek yang sesudahnya. dari kemaren aku udah liatin njer itu, koenya gapeka :v, masa kalo ama hany bisa peka ama coding ga wkwkwkw
 module.exports = {
     name: "kiss",
     category: "utilites",
