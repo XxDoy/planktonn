@@ -170,7 +170,6 @@ client.on("ready", () => {
 // Afk command
                     if (!message.content.startsWith(prefix)) return;
 
-                    let args = message.content.slice(prefix.lenght).trim().split(/ +/g);
                     let msg = message.content.tolowerCase();
                     let cmd = args.shift().tolowerCase();
             
