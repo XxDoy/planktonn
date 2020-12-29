@@ -5,7 +5,6 @@ const { MessageEmbed } = require("discord.js")
 module.exports = {
     name: "afk",
     run: async (client, message, args) => {
-        let args = message.content.slice(prefix.lenght).trim().split(/ +g/);
         let msg = message.content.tolowerCase();
         let cmd = args.shift().tolowerCase();
 
