@@ -5,12 +5,12 @@ module.exports = {
     category: "utilites",
     cooldown: 20,
     run: async(client, message, args) => {
-        if (message.channel.id !== "793111314296864798") {
+        if (message.channel.id !== "") {
             return;
         }
 
     await message.delete();
-    await message.member.roles.add("793111000173248533");
+    await message.member.roles.add("");
     return;
     }
 }
