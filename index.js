@@ -150,51 +150,29 @@ client.on("ready", () => {
                             message.delete()
                         }
                     });
-
-    let afk = new db.table("AFKs"),
-        authorStatus = await afk.fetch(message.author.id),
-        mentioned = message.mentions.members.first();
-
-    if (mentioned) {
-        let status = await afk.fetch(mentioned.id);
-
-    if (status) {
-        const embed = new Discord.MessageEmbed()
-        .setColor(0xffffff)
-        .setDescription(`This user (${mentioned.user.tag}) is AFK: **${status}**`)
-        message.channel.send(embed).then(i => i.delete({timeout: 5000}));
-        afk.delete(message.author.id)
-}
-}
-
-// Afk command
-                    if (!message.content.startsWith(prefix)) return;
-            
-                    message.flags = [];
-                    while (args[0] && args[0][0] === "--") {
-                        message.flags.push(args.shift().slice(1));
-                    }
-            
-                    const status = new db.table("AFKs");
-                    let afk = await status.fetch(message.author.id);
-                    const Embed = new Discord.MessageEmbed().setColor(0xffffff)
-            
-                    if (!afk) {
-                        embed.setDescription(`**${message.author.tag}** Is Now Afk.`)
-                        embed.setFooter(`Reason: ${args.join(" ") ? args.join(" ") : "AFK"}`)
-                        status.set(message.author.id, args.join(" ") || `AFK`);
-                    } else {
-                        embed.setDescription(`Welcome back @${message,author.tag} i will remove Your Afk.`);
-                        status.delete(message.author.id);
-                    }
-            
-                    message.channel.send(embed)
-                }
-            
-
-          )
-
+         })
     });
 })
+
+    client.on('guildMemberAdd', (member) => {
+        let channelID = '';
+        if(member.guild.id != '') return
+        let embed = new Discord.MessageEmbed()
+        .setTitle(`Member Joined!!`)
+        .setDescription(`${member.user.tag} has joined this server!`)
+        .setColor("BLACK")
+        .setTimestamp()
+        client.channels.cache.get(channelID).send(embed)
+    })
+    
+    client.on('guildMemberRemove', (member) => {
+        let channelID = '';
+        if(member.guild.id != '') return;
+        let embed = new Discord.MessageEmbed()
+        .setTitle(`Member Left!!`)
+        .setDescription(`\`${member.user.tag}\` has left this server`)
+        .setTimestamp()
+        client.channels.cache.get(channelID).send(embed)
+    })
 
 client.login(process.env.TOKEN);
