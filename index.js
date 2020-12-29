@@ -169,9 +169,6 @@ client.on("ready", () => {
 
 // Afk command
                     if (!message.content.startsWith(prefix)) return;
-
-                    let msg = message.content.tolowerCase();
-                    let cmd = args.shift().tolowerCase();
             
                     message.flags = [];
                     while (args[0] && args[0][0] === "--") {
