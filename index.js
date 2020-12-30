@@ -144,6 +144,16 @@ client.on("ready", () => {
 })
 
 client.on('guildMemberAdd', async(member) => { // this event gets triggered when a new member joins the server!
+
+    let user;
+
+        if (message.mentions.users.first()) {
+            user = message.mentions.users.first();
+        } else if (args[0]) {
+            user = message.guild.members.cache.get(args[0]).user;
+        } else {
+            user = message.author;
+        }
     // Firstly we need to define a channel
     // either using .get or .find, in this case im going to use .get()
     let avatar = user.displayAvatarURL({ size: 4096, dynamic: true });
