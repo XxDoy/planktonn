@@ -25,7 +25,7 @@ module.exports = {
                     inline: false
                 }, {  
                     name: "Utilities ",
-                    value: '`avatar` | `banner` | `say` | `calculate` | `remind` | `weather` | `pic` | `anime`',
+                    value: '`avatar` | `banner` | `say` | `calculate` | `remind` | `translate` | `weather` | `pic` | `anime`',
                     inline: false
                 }, {
                     name: "Fun ",
@@ -36,7 +36,7 @@ module.exports = {
                     value: 'Soon!',
                     inline: false
                 }, {    
-                    name: "Support Bot's",
+                    name: "Our Bot's",
                     value: 
                     
                     
@@ -47,7 +47,7 @@ module.exports = {
 
 
 
-                    name: "Support Server",
+                    name: "Our Server",
                     value: 
                     
                     

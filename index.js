@@ -143,25 +143,29 @@ client.on("ready", () => {
     });
 })
 
-    client.on('guildMemberAdd', (member) => {
-        let channelID = '775184245370912769';
-        if(member.guild.id != '774092854686777414') return
-        let embed = new Discord.MessageEmbed()
-        .setTitle(`Member Joined!!`)
-        .setDescription(`${member.user.tag} has joined this server!`)
-        .setColor("BLACK")
-        .setTimestamp()
-        client.channels.cache.get(channelID).send(embed)
-    })
-    
-    client.on('guildMemberRemove', (member) => {
-        let channelID = '775184245370912769';
-        if(member.guild.id != '774092854686777414') return;
-        let embed = new Discord.MessageEmbed()
-        .setTitle(`Member Left!!`)
-        .setDescription(`\`${member.user.tag}\` has left this server`)
-        .setTimestamp()
-        client.channels.cache.get(channelID).send(embed)
-    })
+client.on('guildMemberAdd', async(member) => { // this event gets triggered when a new member joins the server!
+    // Firstly we need to define a channel
+    // either using .get or .find, in this case im going to use .get()
+    const Channel = member.guild.channels.cache.get('775184245370912769') //insert channel id that you want to send to
+    //making embed
+    const embed = new MessageEmbed()
+        .setColor('GREEN')
+        .setTitle('New Member')
+        .setDescription(`**${member.displayName}** welcome to ${member.guild.name}, we now have ${member.guild.memberCount} members!`)
+    // sends a message to the channel
+    Channel.send(embed)
+})
+client.on('guildMemberRemove', async(member) => { // this event gets triggered when a new member leaves the server!
+    // Firstly we need to define a channel
+    // either using .get or .find, in this case im going to use .get()
+    const Channel = member.guild.channels.cache.get('775184245370912769') //insert channel id that you want to send to
+    //making embed
+    const embed = new MessageEmbed()
+        .setColor('RED')
+        .setTitle('A member left the server :(')
+        .setDescription(`**${member.displayName}** has left ${member.guild.name}, we now have ${member.guild.memberCount} members!`)
+    // sends a message to the channel
+    Channel.send(embed)
+})
 
 client.login(process.env.TOKEN);
