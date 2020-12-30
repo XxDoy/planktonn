@@ -146,12 +146,15 @@ client.on("ready", () => {
 client.on('guildMemberAdd', async(member) => { // this event gets triggered when a new member joins the server!
     // Firstly we need to define a channel
     // either using .get or .find, in this case im going to use .get()
+    let avatar = user.displayAvatarURL({ size: 4096, dynamic: true });
     const Channel = member.guild.channels.cache.get('775184245370912769') //insert channel id that you want to send to
     //making embed
     const embed = new MessageEmbed()
         .setColor('GREEN')
-        .setTitle('New Member')
-        .setDescription(`**${member.displayName}** welcome to ${member.guild.name}, we now have ${member.guild.memberCount} members!`)
+        .setTitle(`**Welcome** @${member.displayName} To Server **${member.guild.name}**`)
+        .setDescription(`<a:verified:755234123974574120> Jangan Lupe Untuk Terlebih Dahulu Membaca #verify dan #cmdsroom \n <a:verified:755234123974574120> Take Role Di #verify \n <a:verified:755234123974574120> Biar Kenal Intro Donk Di #cmdsroom \n Semoga Betah Di Server ${member.guild.name}`)
+        .setImage('https://media.discordapp.net/attachments/753168518979256342/755242377031057418/20200915_084249.gif')
+        .setFooter(`Kamu Member Ke ${member.guild.memberCount}`)
     // sends a message to the channel
     Channel.send(embed)
 })
@@ -164,6 +167,7 @@ client.on('guildMemberRemove', async(member) => { // this event gets triggered w
         .setColor('RED')
         .setTitle('A member left the server :(')
         .setDescription(`**${member.displayName}** has left ${member.guild.name}, we now have ${member.guild.memberCount} members!`)
+        .setImage(avatar)
     // sends a message to the channel
     Channel.send(embed)
 })
