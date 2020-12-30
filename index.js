@@ -145,18 +145,8 @@ client.on("ready", () => {
 
 client.on('guildMemberAdd', async(member) => { // this event gets triggered when a new member joins the server!
 
-    let user;
-
-        if (message.mentions.users.first()) {
-            user = message.mentions.users.first();
-        } else if (args[0]) {
-            user = message.guild.members.cache.get(args[0]).user;
-        } else {
-            user = message.author;
-        }
     // Firstly we need to define a channel
     // either using .get or .find, in this case im going to use .get()
-    let avatar = user.displayAvatarURL({ size: 4096, dynamic: true });
     const Channel = member.guild.channels.cache.get('775184245370912769') //insert channel id that you want to send to
     //making embed
     const embed = new MessageEmbed()
@@ -177,7 +167,7 @@ client.on('guildMemberRemove', async(member) => { // this event gets triggered w
         .setColor('RED')
         .setTitle('A member left the server :(')
         .setDescription(`**${member.displayName}** has left ${member.guild.name}, we now have ${member.guild.memberCount} members!`)
-        .setImage(avatar)
+        .setImage('https://www.askideas.com/media/07/Taylor-Swift-Waving-Hand-Goodbye-Gif-Picture.gif')
     // sends a message to the channel
     Channel.send(embed)
 })
