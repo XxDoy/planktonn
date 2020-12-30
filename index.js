@@ -152,7 +152,7 @@ client.on('guildMemberAdd', async(member) => { // this event gets triggered when
     const embed = new MessageEmbed()
         .setColor('GREEN')
         .setTitle(`**Welcome** @${member.displayName} To Server **${member.guild.name}**`)
-        .setDescription(`<a:verified:755234123974574120> Jangan Lupe Untuk Terlebih Dahulu Membaca #verify dan #cmdsroom \n <a:verified:755234123974574120> Take Role Di #verify \n <a:verified:755234123974574120> Biar Kenal Intro Donk Di #cmdsroom \n Semoga Betah Di Server ${member.guild.name}`)
+        .setDescription(`<a:verified:755234123974574120> Jangan Lupe Untuk Terlebih Dahulu Membaca \#verify dan \#cmdsroom \n\n <a:verified:755234123974574120> Take Role Di \#verify \n\n <a:verified:755234123974574120> Biar Kenal Intro Donk Di \#cmdsroom \n\n Semoga Betah Di Server ${member.guild.name}`)
         .setImage('https://media.discordapp.net/attachments/753168518979256342/755242377031057418/20200915_084249.gif')
         .setFooter(`Kamu Member Ke ${member.guild.memberCount}`)
     // sends a message to the channel
