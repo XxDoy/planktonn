@@ -13,13 +13,13 @@ module.exports = {
     if(!reason) return message.reply(":x: You Should Enter Reason")
 
     db.set(`remind.${message.author.id}`,Date.now() + ms(timeuser))
-    message.channel.send(`I will Remind You, @${message.author.username}`)
+    message.channel.send(`I will Remind You, @${message.author.username.tag}`)
     const interval = setInterval(function() {
 
 
         if(Date.now() > db.fetch(`remind.${message.author.id}`)){
             db.delete(`remind.${message.author.id}`)
-            message.author.send(`**Remind:**${reason}`)
+            message.author.send(`**Remind: **${reason}`)
             .catch(e => console.log(e))
             clearInterval(interval)
         }
