@@ -13,7 +13,7 @@
     "figlet": "^1.5.0",
     "fs": "0.0.1-security",
     "mathjs": "^8.0.1",
-    "mongoose": "^5.10.15",
+    "mongoose": "^5.11.9",
     "ms": "^2.1.2",
     "nan": "^2.14.2",
     "node-gyp": "^7.1.2",
@@ -25,6 +25,7 @@
     "snekfetch": "^4.0.4",
     "something-random-on-discord": "0.0.2",
     "superagent": "^6.1.0",
+    "translate-google": "^1.4.3",
     "vm": "^0.1.0",
     "weather-js": "^2.0.0"
   },

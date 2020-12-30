@@ -31,7 +31,7 @@ client.on("ready", () => {
     console.log(`Bot Ready Up \n1 \n2 \n3 \nReady To Duty ${client.user.username} !`);
 
     let statuses = [
-        `b?help | ${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)} Members Blank`
+        `b?help | ${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)} Blank Members`
     ];
 
     setInterval(function() {
@@ -43,18 +43,7 @@ client.on("ready", () => {
     client.on("message", message => {
         let wordArray = message.content.split(" ");
         console.log(wordArray)
-
-        let filterWords = [
-        ];
-        for (var i = 0; i < filterWords.length; i++) {
-            if (wordArray.includes(filterWords[i])) {
-                message.delete();
-                message.reply(
-                    'Aduh Kasar Bet Kamu Teh :('
-                );
-                break;
-            }
-        }
+        
     })
     client.on('message', message => {
         if (message.author.bot) return;

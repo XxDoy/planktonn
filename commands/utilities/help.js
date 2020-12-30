@@ -14,6 +14,7 @@ module.exports = {
             let embed = new MessageEmbed()
                 .setTitle('Help Menu')
                 .setAuthor(`${message.guild.name}`, avatar)
+                .setThumbnail('https://cdn.discordapp.com/attachments/771446281322889237/793661827858694184/giphy_2.gif')
                 .addFields({
                     name: "Administrator ",
                     value: '`ban` | `kick` | `warn` | `mute` | `warnings` | `unban` | `deletewarns` | `unmute` | `clear` ',
