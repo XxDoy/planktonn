@@ -8,7 +8,8 @@ module.exports = {
     
     const kiss = new MessageEmbed()
         .setColor('Black')
-        .setTitle('Type : b?verify to access all channel')
+        .setTitle('How To Verify?')
+        .setDescription('Type : b?verify to access all channell')
     return message.channel.send(kiss)
 
 }
