@@ -9,7 +9,7 @@ module.exports = {
     const kiss = new MessageEmbed()
         .setColor('Black')
         .setTitle('How To Access All Channel?')
-        .setDescription('Type : b?verify')
+        .setDescription('***Type : b?verify***')
     return message.channel.send(kiss)
 
 }
