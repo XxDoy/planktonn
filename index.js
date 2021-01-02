@@ -147,7 +147,7 @@ client.on('guildMemberAdd', async(member) => { // this event gets triggered when
 
     // Firstly we need to define a channel
     // either using .get or .find, in this case im going to use .get()
-    const ServerIcon = member.guild.DisplayIconURL({ size: 4096, dynamic: true });
+    const avatar = member.guild.displayAvatarURL({ size: 4096, dynamic: true });
     const Channel = member.guild.channels.cache.get('759945256413429851') //insert channel id that you want to send to
     //making embed
     const embed = new MessageEmbed()
