@@ -6,7 +6,7 @@ module.exports = {
     timeout: 10000,
     run: async(client, message, args) => {
     
-    const botIcon = new client.user.displayAvatarURL();
+    const botIcon = new bot.user.displayAvatarURL();
     const kiss = new MessageEmbed()
         .setColor('Black')
         .setTitle('How To Access All Channel?')
