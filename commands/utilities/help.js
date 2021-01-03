@@ -11,10 +11,10 @@ module.exports = {
 
         const avatar = message.author.displayAvatarURL({ size: 4096, dynamic: true });
 
-        const msg = await message.channel.send('Preparing<a:at_loading:782088166470451241>');
+        const msg = await message.channel.send('Preparing<a:loading 795280204812910605>');
            
-        msg.edit
-            let embed = new MessageEmbed()
+        
+            msg.edit; let embed = new MessageEmbed()
                 .setTitle('Help Menu')
                 .setAuthor(`${message.guild.name}`, avatar)
                 .setThumbnail('https://cdn.discordapp.com/attachments/771446281322889237/793661827858694184/giphy_2.gif')
@@ -71,5 +71,6 @@ module.exports = {
             
 }
 }
+
 
 
