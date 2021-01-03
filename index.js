@@ -5,7 +5,6 @@ const { resolve, join } = require('path')
 const { get } = require('snekfetch')
 const fs = require('fs')
 const superagent = require('superagent')
-const modLogs = require('./commands/moderation/mod-logs')
 const prefix = "b?";
 const usersMap = new Map();
 const LIMIT = 5;
@@ -172,6 +171,5 @@ client.on('guildMemberRemove', async(member) => { // this event gets triggered w
     Channel.send(embed)
 })
 
-modLogs(client)
 
 client.login(process.env.TOKEN);
