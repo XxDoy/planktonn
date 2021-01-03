@@ -1,4 +1,3 @@
-const { id } = require("common-tags");
 const { MessageEmbed, Guild, Message } = require("discord.js");
 const db = require("quick.db");
 

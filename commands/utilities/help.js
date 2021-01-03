@@ -25,7 +25,7 @@ module.exports = {
                     inline: false
                 }, {  
                     name: "Utilities ",
-                    value: '`avatar` | `banner` | `say` | `calculate` | `remind` | `translate` | `weather` | `pic` | `anime`',
+                    value: '`avatar` | `banner` | `say` | `calculate` | `remind` | `weather` | `pic` | `anime`',
                     inline: false
                 }, {
                     name: "Fun ",
