@@ -1,6 +1,9 @@
 const Discord = require("discord.js")
 const ms = require("ms")
 const db = require("quick.db")
+
+let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
+
 module.exports = {
     name: "remind",
     category: "utilites",
@@ -13,7 +16,7 @@ module.exports = {
     if(!reason) return message.reply(":x: You Should Enter Reason")
 
     db.set(`remind.${message.author.id}`,Date.now() + ms(timeuser))
-    message.channel.send(`I will Remind You, @${message.author.username.tag}`)
+    message.channel.send(`I will Remind You, <@${user.user.id}>`)
     const interval = setInterval(function() {
 
 
