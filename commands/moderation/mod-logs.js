@@ -26,7 +26,7 @@ module.exports = {
         }
 
         if (args[0] === "disable") {
-            let toggle = db.get(`moderation.${message,guild.id}.modlog.toggle`);
+            let toggle = db.get(`moderation.${message.guild.id}.modlog.toggle`);
             if (!toggle || toggle === false) return message.channel.send("I guess, the audit log has already been disabled before.");
             await db.set(`moderation.${message.guild.id}.modlog.toggle`, false);
             await db.delete(`moderation.${channel.guild.id}.modlog.channel`);
