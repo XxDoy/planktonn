@@ -10,7 +10,10 @@ module.exports = {
         let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
 
         const avatar = message.author.displayAvatarURL({ size: 4096, dynamic: true });
-            
+
+        const msg = await message.channel.send('Preparing<a:at_loading:782088166470451241>');
+           
+        msg.edit
             let embed = new MessageEmbed()
                 .setTitle('Help Menu')
                 .setAuthor(`${message.guild.name}`, avatar)
@@ -65,7 +68,8 @@ module.exports = {
                 .setTimestamp()
             return message.channel.send(embed)
             msg.delete()
-            }
+            
+}
 }
 
 
