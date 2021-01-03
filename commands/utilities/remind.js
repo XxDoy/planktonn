@@ -2,13 +2,13 @@ const Discord = require("discord.js")
 const ms = require("ms")
 const db = require("quick.db")
 
-let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
 
 module.exports = {
     name: "remind",
     category: "utilites",
     timeout: 10000,
     run: async(client, message, args) => {
+    let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
     let timeuser = args[0]
     let reason = args.slice(1).join("")
 
