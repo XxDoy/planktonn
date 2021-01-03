@@ -9,7 +9,6 @@ module.exports = {
             return;
         }
 
-    await message.delete();
     await message.channel.send("Wait A second");
     await message.member.roles.add("668491452233547816");
     await message.delete();
