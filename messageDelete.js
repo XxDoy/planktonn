@@ -2,10 +2,7 @@ const { id } = require("common-tags");
 const { MessageEmbed, Guild, Message } = require("discord.js");
 const db = require("quick.db");
 
-mmodule.exports = {
-    name: "messageDelete",
-    category: "moderations",
-    run: async(client, message, args) => {
+exports.run = async(client, message, args) => {
 
     let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
 
@@ -28,4 +25,3 @@ mmodule.exports = {
     return message.guild.channels.cache.get(modlog.channel).send(embed);
 
     }
-}
