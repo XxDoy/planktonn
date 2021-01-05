@@ -145,7 +145,6 @@ client.on("ready", () => {
 
 client.on('guildMemberAdd', async(member) => { // this event gets triggered when a new member joins the server!
 
-    let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
     // Firstly we need to define a channel
     // either using .get or .find, in this case im going to use .get()
     const Channel = member.guild.channels.cache.get('759945256413429851') //insert channel id that you want to send to
