@@ -10,7 +10,11 @@ module.exports = {
         .setColor('RANDOM')
         .setThumbnail('https://cdn.discordapp.com/attachments/771446281322889237/793661827858694184/giphy_2.gif')
         .setDescription(`Want to add ${client.user.username} to your Server?`)
-        .setFields(`[Klick here](https://discord.com/api/oauth2/authorize?client_id=753883436984565800&permissions=8&scope=bot)`)
+        .addFields({
+            name: "click below",
+            value: `[Click Here](https://discord.com/api/oauth2/authorize?client_id=753883436984565800&permissions=2147483639&scope=bot)`,
+            inline: true
+        })
     return message.channel.send(kiss)
 
 }
