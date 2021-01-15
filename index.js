@@ -91,6 +91,43 @@ client.on("ready", () => {
         }
     });
 
+    client.on('guildMemberAdd', async(member) => { // this event gets triggered when a new member joins the server!
+
+        // Firstly we need to define a channel
+        // either using .get or .find, in this case im going to use .get()
+        const Channel = member.guild.channels.cache.get('759945256413429851') //insert channel id that you want to send to
+        //making embed
+        const embed = new MessageEmbed()
+            .setColor("RANDOM")
+            .setDescription(`Welcome **${member.displayName}** To Server **${member.guild.name}**\n\n<a:verified:755234123974574120> Jangan Lupa Untuk Terlebih Dahulu Membaca <#723202845989535877> Dan <#668495345235525653>\n\n <a:verified:755234123974574120> Take Role Di <#703552850281758740> dan <#724269570780561520>\n\n <a:verified:755234123974574120> Biar Kenal Intro Donk Di <#705323788732203069> \n\n Semoga Betah Di Server ${member.guild.name}`)
+            .setImage('https://images-ext-2.discordapp.net/external/1F44P3N0b-hGokHSs40zD6X4K6kb2mdNHieAMwOXx94/https/media.discordapp.net/attachments/753168518979256342/795916542633574400/ezgif.com-add-text.gif')
+            .setFooter(`Kamu Member Ke ${member.guild.memberCount}`)
+        // sends a message to the channel
+        Channel.send(embed)
+    })
+    client.on('guildMemberRemove', async(member) => { // this event gets triggered when a new member leaves the server!
+        // Firstly we need to define a channel
+        // either using .get or .find, in this case im going to use .get()
+        const Channel = member.guild.channels.cache.get('775184245370912769') //insert channel id that you want to send to
+        //making embed
+        const embed = new MessageEmbed()
+            .setColor('RED')
+            .setTitle('A member left the server :(')
+            .setDescription(`**${member.displayName}** has left ${member.guild.name}, we now have ${member.guild.memberCount} members!`)
+            .setImage('https://www.askideas.com/media/07/Taylor-Swift-Waving-Hand-Goodbye-Gif-Picture.gif')
+        // sends a message to the channel
+        Channel.send(embed)
+    })
+
+    client.on('message', async message =>{
+        if(message.content === `${prefix}testmasuk`){
+        client.emit('guildMemberAdd', message.member)
+        message.delete()
+        }
+      });
+      
+// jangan pernah naruh command atau apapun dibawah ini karena script ini menentukan antar file jadi wajib diatas biar berfungsi
+
     client.on("message", async message => {
         if (message.author.bot) return;
         if (!message.guild) return;
@@ -143,33 +180,7 @@ client.on("ready", () => {
     });
 })
 
-client.on('guildMemberAdd', async(member) => { // this event gets triggered when a new member joins the server!
 
-    // Firstly we need to define a channel
-    // either using .get or .find, in this case im going to use .get()
-    const Channel = member.guild.channels.cache.get('759945256413429851') //insert channel id that you want to send to
-    //making embed
-    const embed = new MessageEmbed()
-        .setColor("RANDOM")
-        .setDescription(`Welcome **${member.displayName}** To Server **${member.guild.name}**\n\n<a:verified:755234123974574120> Jangan Lupe Untuk Terlebih Dahulu Membaca <#723202845989535877> Dan <#668495345235525653>\n\n <a:verified:755234123974574120> Take Role Di <#703552850281758740> dan <#724269570780561520>\n\n <a:verified:755234123974574120> Biar Kenal Intro Donk Di <#705323788732203069> \n\n Semoga Betah Di Server ${member.guild.name}`)
-        .setImage('https://media.discordapp.net/attachments/753168518979256342/755242377031057418/20200915_084249.gif')
-        .setFooter(`Kamu Member Ke ${member.guild.memberCount}`)
-    // sends a message to the channel
-    Channel.send(embed)
-})
-client.on('guildMemberRemove', async(member) => { // this event gets triggered when a new member leaves the server!
-    // Firstly we need to define a channel
-    // either using .get or .find, in this case im going to use .get()
-    const Channel = member.guild.channels.cache.get('775184245370912769') //insert channel id that you want to send to
-    //making embed
-    const embed = new MessageEmbed()
-        .setColor('RED')
-        .setTitle('A member left the server :(')
-        .setDescription(`**${member.displayName}** has left ${member.guild.name}, we now have ${member.guild.memberCount} members!`)
-        .setImage('https://www.askideas.com/media/07/Taylor-Swift-Waving-Hand-Goodbye-Gif-Picture.gif')
-    // sends a message to the channel
-    Channel.send(embed)
-})
 
 
 client.login(process.env.TOKEN);
