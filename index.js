@@ -100,7 +100,7 @@ client.on("ready", () => {
         const embed = new MessageEmbed()
             .setColor("RANDOM")
             .setDescription(`Welcome **${member.displayName}** To Server **${member.guild.name}**\n\n<a:verified:755234123974574120> Jangan Lupa Untuk Terlebih Dahulu Membaca <#723202845989535877> Dan <#668495345235525653>\n\n <a:verified:755234123974574120> Take Role Di <#703552850281758740> dan <#724269570780561520>\n\n <a:verified:755234123974574120> Biar Kenal Intro Donk Di <#705323788732203069> \n\n Semoga Betah Di Server ${member.guild.name}`)
-            .setImage('welcome.gif')
+            .setImage('https://media.discordapp.net/attachments/753168518979256342/795916542633574400/ezgif.com-add-text.gif')
             .setFooter(`Kamu Member Ke ${member.guild.memberCount}`)
         // sends a message to the channel
         Channel.send(embed)
