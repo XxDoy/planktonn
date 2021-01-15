@@ -119,13 +119,6 @@ client.on("ready", () => {
         Channel.send(embed)
     })
 
-    client.on('message', async message =>{
-        if(message.content === `${prefix}testmasuk`){
-        client.emit('guildMemberAdd', message.member)
-        message.delete()
-        }
-      });
-
 // jangan pernah naruh command atau apapun dibawah ini karena script ini menentukan antar file jadi wajib diatas biar berfungsi
 
     client.on("message", async message => {
