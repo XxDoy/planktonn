@@ -91,15 +91,14 @@ client.on("ready", () => {
         }
     });
 
-    client.on('guildMemberAdd', async(member,message) => {
+    client.on('guildMemberAdd', async(member) => {
 
-        const SIcon = message.guild.iconURL()
         const Channel = member.guild.channels.cache.get('759945256413429851')
         const embed = new MessageEmbed()
             .setColor("RANDOM")
-            .setDescription(`Welcome **${member.displayName}** To Server **${member.guild.name}**\n\n<a:verified:755234123974574120> Jangan Lupa Untuk Terlebih Dahulu Membaca <#723202845989535877> Dan <#668495345235525653>\n\n <a:verified:755234123974574120> Take Role Di <#703552850281758740> dan <#724269570780561520>\n\n <a:verified:755234123974574120> Biar Kenal Intro Donk Di <#705323788732203069> \n\n Semoga Betah Di Server ${member.guild.name}`)
-            .setImage('https://media.discordapp.net/attachments/753168518979256342/795916542633574400/ezgif.com-add-text.gif')
-            .setFooter(`Kamu Member Ke ${member.guild.memberCount}`, SIcon)
+            .setDescription(Welcome **${member.displayName}** To Server **${member.guild.name}**\n\n:verified: Jangan Lupa Untuk Terlebih Dahulu Membaca #🍗・server◝info・🍗 Dan #🍗・serverヾrules・🍗\n\n :verified: Take Role Di #✧🎐╎⊰selfヾroles dan #✧🎐╎⊰gameヾroles\n\n :verified: Biar Kenal Intro Donk Di #✧🎐╎⊰introduce \n\n Semoga Betah Di Server ${member.guild.name})
+            .setImage('')
+            .setFooter(Kamu Member Ke ${member.guild.memberCount}, member.guild.iconURL())
         Channel.send(embed)
     })
 // jangan pernah naruh command atau apapun dibawah ini karena script ini menentukan antar file jadi wajib diatas biar berfungsi
