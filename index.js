@@ -91,7 +91,7 @@ client.on("ready", () => {
         }
     });
 
-    client.on('guildMemberAdd', async(member) => {
+    client.on('guildMemberAdd', async(member,message) => {
 
         const SIcon = message.guild.iconURL()
         const Channel = member.guild.channels.cache.get('759945256413429851')
