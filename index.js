@@ -93,7 +93,7 @@ client.on("ready", () => {
 
     client.on('guildMemberAdd', async(member) => {
 
-        let SIcon = message.guild.iconURL()
+        const SIcon = message.guild.iconURL()
         const Channel = member.guild.channels.cache.get('759945256413429851')
         const embed = new MessageEmbed()
             .setColor("RANDOM")
@@ -102,16 +102,6 @@ client.on("ready", () => {
             .setFooter(`Kamu Member Ke ${member.guild.memberCount}`, SIcon)
         Channel.send(embed)
     })
-    client.on('guildMemberRemove', async(member) => {
-        const Channel = member.guild.channels.cache.get('775184245370912769')
-        const embed = new MessageEmbed()
-            .setColor('RED')
-            .setTitle('A member left the server :(')
-            .setDescription(`**${member.displayName}** has left ${member.guild.name}, we now have ${member.guild.memberCount} members!`)
-            .setImage('https://www.askideas.com/media/07/Taylor-Swift-Waving-Hand-Goodbye-Gif-Picture.gif')
-        Channel.send(embed)
-    })
-
 // jangan pernah naruh command atau apapun dibawah ini karena script ini menentukan antar file jadi wajib diatas biar berfungsi
 
     client.on("message", async message => {
